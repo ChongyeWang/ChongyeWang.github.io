@@ -1,3 +1,3 @@
 ## 欢迎来到我的主页
 
-[高手榜1](kafka.md)
+[Kafka静态成员](kafka-static-membership.md)
