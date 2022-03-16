@@ -5,7 +5,9 @@ ISR：In-Sync Replica
 ack：
 
 acks=0：producer不等待broker返回的ack，producer不会知道消息是否丢失也不会重新发送消息。
+
 acks=1：leader收到消息后，producer会收到ack。消息丢失只会发生在leader在ack了消息后立刻失效，但还没来的及同步给follower。
+
 acks=all：producer得到ack在所有in-sync replicas收到消息的时候。leader会等待所有isr确认收到消息。
 
 AR：所有副本
