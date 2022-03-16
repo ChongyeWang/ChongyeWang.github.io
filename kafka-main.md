@@ -1,0 +1,42 @@
+## Kafka 核心原理
+
+Kafka中的数据称为message，就类似于record和row。Message是以batches的形式写入Kafka，batch就是一组数据，他们被写入同一个topic和partition。 Message被写入topic，topic又被分成了partition。每个partition可以在不同的server上。
+
+分批次写入消息是为了提高效率。
+
+topic：主题，一个主题代表了一类消息，就像数据库中的表一样。
+
+Partition：分区，一个主题有若干个分区，同一个主题的分区可以不分布在同一个机器上，单一主题中的分区有序，但是无法保证所有的分区有序。
+
+Producer用来创造消息。默认情况下，producer不care往哪个partition中写，一个topic中message会被均匀的分配到partition中。通过message key，partitioner会生成这个key的hash并把message写到特定的partition中。
+
+Consumer读取数据。一个consumer会subscribe到一个或多个topic下，并以message被produce的顺序读取。通过跟踪message offset，consumer记录哪些消息已经被消费过。每个message有一个独立的offset，对于每个partition，通过存储最后消费消息的offset在zookeeper或kafka中，consumer可以停止重启是不失去上次读取的位置。
+
+Consumer组成了consumer group，group保证了每个partition只有一个成员进行消费。如果一个consumer失败，group中的consumer会rebalance partition。
+
+一个kafka的server称为一个broker。一个partition在cluster中被归在一个broker下，这个broker被称为partition的leader。一个partition可以被assign到多个broker下，这样partition就会被复制。
+
+Replica：副本，分为leader和follower，leader对外提供服务。
+
+为什么要用kafka：多个生产者，多个消费者，磁盘存储，可拓展性高，高性能。
+
+把partition从一个consumer分配到另一个consumer称为rebalance。Rebalance保证了consumer group的高可用和高拓展性。在rebalance过程中，consumer不消费消息。
+
+offset：在partition中给message连续的id，用来识别每条消息。
+
+Zookeeper的作用：在集群不同节点间建立coordination。同时，如果哪个节点失败，我们还可以通过zookeeper从之前committed offset中恢复因为zookeeper周期性的commit offset。如果kafka的cluster有什么更改，zookeeper会通知所有node这一更改比如增删broker或topic。
+
+ISR：In-Sync Replicas, 是和leader同步的复制的分区，这些followers和leader有着相同的message。
+
+QueueFullException：当producer以broker无法接受的速度发送消息是会出现，解决方案是增加broker的数量。
+
+Retention Period: retention period 可以帮助保持所有published的消息并不在乎消息是否被消费。这些记录可以通过retention period的配置进行销毁来腾出一些空间。
+
+多分区多副本的好处：kafka通过给topic指定多个分区分布在多个broker上，并发能力较好（负载均衡）。partition可以指定replica数，增加了消息存储的安全性，提高了容灾能力，不过也增加了存储空间。
+
+
+
+
+
+
+
