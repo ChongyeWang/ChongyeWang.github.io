@@ -5,6 +5,7 @@
 [深入理解Kafka(Note)](kafka-core.md) &nbsp;&nbsp;
 [Kafka ISR](kafka-isr.md) &nbsp;&nbsp;
 [RabbitMQ Exchange](rabbitmq-exchange.md) &nbsp;&nbsp;
+[RabbitMQ实战指南(Note)](rabbitmq-guide.md) &nbsp;&nbsp;
 [Redisson分布式锁](java-redisson.md) &nbsp;&nbsp;
 [Redis深度历险(Note)](redis-deep.md) &nbsp;&nbsp;
 [Redis设计与实现(Note)](redis-design.md) &nbsp;&nbsp;
