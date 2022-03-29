@@ -1,4 +1,4 @@
-### Elasticsearch 权威指南（Note)
+## Elasticsearch 权威指南（Note)
 
 存储数据到 Elasticsearch 的行为叫做索引 ，但在索引一个文档之前，需要确定将文档存储在哪里。
 
