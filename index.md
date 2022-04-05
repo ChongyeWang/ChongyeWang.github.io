@@ -15,4 +15,5 @@
 [Elasticsearch权威指南(Note)](elasticsearch-guide.md) &nbsp;&nbsp;
 [Elasticsearch读写数据过程](elasticsearch-data.md) &nbsp;&nbsp;
 [Java CountDownLatch](java-CountDownLatch.md) &nbsp;&nbsp;
+[MybatisPlus指南](mybatisplus-guide.md) &nbsp;&nbsp;
 
