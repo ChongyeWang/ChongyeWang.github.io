@@ -6,6 +6,7 @@
 [Kafka ISR](kafka-isr.md) &nbsp;&nbsp;
 [RabbitMQ Exchange](rabbitmq-exchange.md) &nbsp;&nbsp;
 [RabbitMQ实战指南(Note)](rabbitmq-guide.md) &nbsp;&nbsp;
+[RabbitMQ实战(Note)](rabbitmq-inaction.md) &nbsp;&nbsp;
 [RabbitMQ高可用性](rabbitmq-high-availability.md) &nbsp;&nbsp;
 [RabbitMQ消息可靠传输](rabbitmq-reliable.md) &nbsp;&nbsp;
 [Redisson分布式锁](java-redisson.md) &nbsp;&nbsp;
