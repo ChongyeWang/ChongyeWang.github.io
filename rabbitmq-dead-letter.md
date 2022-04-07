@@ -22,7 +22,6 @@ Dead letter exchanges (DLXs) 是普通的exchange，可以是任何type。
 rabbitmqctl set_policy DLX ".*" '{"dead-letter-exchange":"my-dlx"}' --apply-to queues
 ```
 - 为queue设置死信交换机。specify the optional x-dead-letter-exchange argument
-
 ```
 channel.exchangeDeclare("some.exchange.name", "direct");
 
