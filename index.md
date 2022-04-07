@@ -5,6 +5,7 @@
 [深入理解Kafka(Note)](kafka-core.md) &nbsp;&nbsp;
 [Kafka ISR](kafka-isr.md) &nbsp;&nbsp;
 [RabbitMQ Exchange](rabbitmq-exchange.md) &nbsp;&nbsp;
+[RabbitMQ Queue](rabbitmq-queue.md) &nbsp;&nbsp;
 [RabbitMQ实战指南(Note)](rabbitmq-guide.md) &nbsp;&nbsp;
 [RabbitMQ实战(Note)](rabbitmq-inaction.md) &nbsp;&nbsp;
 [RabbitMQ高可用性](rabbitmq-high-availability.md) &nbsp;&nbsp;
