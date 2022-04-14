@@ -3,6 +3,7 @@
 [Kafka静态成员](kafka-static-membership.md) &nbsp;&nbsp;
 [Kafka核心原理](kafka-main.md) &nbsp;&nbsp;
 [深入理解Kafka(Note)](kafka-core.md) &nbsp;&nbsp;
+[Kafka权威指南(Note)](kafka-guide.md) &nbsp;&nbsp;
 [Kafka ISR](kafka-isr.md) &nbsp;&nbsp;
 [RabbitMQ Exchange](rabbitmq-exchange.md) &nbsp;&nbsp;
 [RabbitMQ Queue](rabbitmq-queue.md) &nbsp;&nbsp;
